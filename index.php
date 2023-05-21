@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="lv">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -24,10 +24,15 @@
             
             foreach ($articles as $article) { ?>
             <div class="child_content">
-                <img src="<?php echo $article["image"] ?>" alt="picture">
+                <!--<img src=" " alt="picture"> -->
                 <div class="description">
-                    <h4> <?= $article["title"] ?> </h4>
-                    <p> <?php echo($article["content"]) ?> </p>
+                    <h4> <?= $article["name"] ?> </h4>
+                    <p> <?php echo($article["price"]) ?> </p>
+                    <p> <?php echo($article["size"]) ?> </p>
+                    <div id="bottom_handler">
+                    <input type="checkbox" id="check"> 
+                    <p id="key">Unique Key</p> 
+                    </div>
                 </div>
             </div>
             <?php } ?>

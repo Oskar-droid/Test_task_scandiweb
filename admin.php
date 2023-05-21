@@ -21,9 +21,9 @@
         <main>
             <form action="" method="post" enctype="multipart/form-data">
                 <span>Admin Panel</span>
-                <input type="text" name="title" id="title" placeholder="Title">
-                <input type="text" name="content" placeholder="Content">
-                <input type="file" name="image">
+                <input type="text" name="name" id="title" placeholder="Product Name">
+                <input type="text" name="price" placeholder="Price">
+                <input type="size" name="size" placeholder="Size">
                 <input type="submit" id="submit" value="Submit" name="submit-article" style="cursor: pointer;">
             </form>
         </main>
