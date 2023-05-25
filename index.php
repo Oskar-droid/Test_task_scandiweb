@@ -20,22 +20,34 @@
 
         <main>
             <?php
-            $articles = require_once("data/articles.php");
+            include './db_connect.php';
+
+            $sql = "SELECT * FROM products";
+            $result = $conn->query($sql);
             
-            foreach ($articles as $article) { ?>
-            <div class="child_content">
-                <!--<img src=" " alt="picture"> -->
-                <div class="description">
-                    <h4> <?= $article["name"] ?> </h4>
-                    <p> <?php echo($article["price"]) ?> </p>
-                    <p> <?php echo($article["size"]) ?> </p>
-                    <div id="bottom_handler">
-                    <input type="checkbox" id="check"> 
-                    <p id="key">Unique Key</p> 
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    ?>
+                    <div class="child_content">
+                        <div class="description">
+                            <h4> <?php echo $row["name"]; ?> </h4>
+                            <p> <?php echo $row["price"] . '$'; ?> </p>
+                            <p> <?php echo $row["size"]; ?> </p>
+                            <div id="bottom_handler">
+                                <form action="delete.php" method="POST" class="moderating_buttons" style="all: unset;">
+                                    <input type="checkbox" id="check" name="check" value="" style="margin: 6px 0 0 3px;">
+                                </form>
+                                <p id="key" style="padding: 0; font-size: 18px;"> <?php echo $row["id"]; ?> </p> 
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <?php } ?>
+                    <?php
+                }
+            } else {
+                echo "Нет данных";
+            }
+            ?>
+            
         </main>
 
         <?php require_once("includes/footer.php") ?>

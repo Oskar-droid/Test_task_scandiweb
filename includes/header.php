@@ -10,14 +10,10 @@
     <div class="wrapper">
         <ul>
             <li><a href="index.php">Main Page</a></li>
-            <!--<li><a href="login.php">Login</a></li>
-            <li><a href="logout.php">Logout</a></li>-->
-
             <?php if (isset($_SESSION['logged_in'])): ?>             
                 <li><a href="login.php">Admin Panel</a></li>
                 <li><a href="logout.php">Logout</a></li>
-                <li><a href="#">Delete</a></li>
-                <li><a href="#">Add</a></li>
+                <li><a href="delete.php">Delete</a></li>
             <?php else: ?>
                 <li><a href="login.php">Login</a></li>
             <?php endif; ?>

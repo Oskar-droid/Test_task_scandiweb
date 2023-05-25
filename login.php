@@ -24,7 +24,6 @@
                 <span>Contact Form</span>
                 <input type="text" name="username" id="email" placeholder="Username" style="letter-spacing: 1px;">
                 <input type="password" name="password" placeholder="Password" style="letter-spacing: 1px;">
-<!--                <label for="checkbox">I'm not a robot<input type="checkbox" name="checkbox"></label> -->
                 <input type="submit" id="submit" value="Submit" name="submit" style="cursor: pointer; letter-spacing: 2px;">
             </form>
         </main>

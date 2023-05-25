@@ -65,6 +65,7 @@ nav ul {
 nav li {
     margin: 0px 5px 0px 20px;
     cursor: pointer;
+    height: auto;
 }
 
 nav a {
@@ -96,6 +97,9 @@ nav a {
     }
     .logo {
         display: none;
+    }
+    .moderating_buttons * {
+        font-size: 10px;
     }
 }
 
@@ -217,13 +221,6 @@ form label {
     flex: 1;
 }
 
-/*
-form input[type="checkbox"] {
-    height: 30px;
-    flex: 1;
-}
-*/
-
 .form_result {
     display: flex;
     align-items: center;
@@ -232,35 +229,38 @@ form input[type="checkbox"] {
 
 #bottom_handler {
     width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
-    padding: 55px 0 0 0;
     justify-content: space-between;
+    margin: 0 auto;
+    padding: 55px 0 5px 0;
 }
 
-#bottom_handler p {
-    padding: 4px 10px;
-}
-
-/* Стилизация чекбокса */
 input[type="checkbox"] {
-    appearance: none; /* Отключение стандартного внешнего вида для других браузеров */
-    width: 20px; /* Ширина чекбокса */
-    height: 20px; /* Высота чекбокса */
-    border-radius: 5px; /* Радиус границы (может быть любым другим значением) */
-    border: 1px solid #000000; /* Граница чекбокса */
-    outline: none; /* Удаление контура фокуса */
-    cursor: pointer; /* Изменение курсора при наведении */
-  }
-  
-  /* Стилизация отмеченного чекбокса */
-  input[type="checkbox"]:checked::before {
-    content: ''; /* Добавление пустого содержимого для псевдоэлемента */
-    display: block; /* Отображение псевдоэлемента */
-    width: 14px; /* Ширина псевдоэлемента (отмеченного состояния) */
-    height: 14px; /* Высота псевдоэлемента (отмеченного состояния) */
-    background-color: #2e3cff; /* Цвет псевдоэлемента (отмеченного состояния) */
-    border-radius: 4px; /* Радиус границы псевдоэлемента (отмеченного состояния) */
-    margin: 2px; /* Отступы псевдоэлемента (отмеченного состояния) */
-  }
-  
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked::before {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: #2e3cff;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+.moderating_buttons {
+    all: unset;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 20px;
+}

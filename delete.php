@@ -19,11 +19,9 @@
         <?php require_once("includes/header.php") ?>
 
         <main>
-            <form action="./handlers/submit_logic.php" method="post" enctype="multipart/form-data">
+            <form action="./handlers/delete_logic.php" method="post" enctype="multipart/form-data">
                 <span>Admin Panel</span>
-                <input type="text" name="name" id="title" placeholder="Product Name">
-                <input type="text" name="price" placeholder="Price">
-                <input type="text" name="size" placeholder="Size">
+                <input type="text" name="id" id="title" placeholder="Product ID">
                 <input type="submit" id="submit" value="Submit" name="submit-article" style="cursor: pointer;">
             </form>
         </main>
